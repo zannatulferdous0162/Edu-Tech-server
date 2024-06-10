@@ -1,7 +1,7 @@
 // const express = require('express')
 const cors = require('cors')
 const app = express()
-require('dotenv').config()
+// require('dotenv').config()
 var jwt = require('jsonwebtoken');
 const stripe = require("stripe")(`${process.env.PAYMENT_KEY}`);
 const port =process.env.PORT || 3000
