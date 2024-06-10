@@ -5,7 +5,7 @@ require('dotenv').config()
 var jwt = require('jsonwebtoken');
 const stripe = require("stripe")(`${process.env.PAYMENT_KEY}`);
 const port =process.env.PORT || 3000
-// app.use(express.json())
+app.use(express.json())
 app.use(cors())
 
 
@@ -28,7 +28,7 @@ const client = new MongoClient(uri, {
 
 
 
-const verifyJWT=(req,res,next)=>{
+// const verifyJWT=(req,res,next)=>{
   console.log('hitting server')
  //  console.log(req.headers.authorize)
    const authorize=req.headers.authorize;
