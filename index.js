@@ -28,7 +28,7 @@ const client = new MongoClient(uri, {
 
 
 
-// const verifyJWT=(req,res,next)=>{
+const verifyJWT=(req,res,next)=>{
   console.log('hitting server')
  //  console.log(req.headers.authorize)
    const authorize=req.headers.authorize;
@@ -90,7 +90,7 @@ async function run() {
     const result= await userCollection.find().toArray()
     res.send(result)
    })
-   app.patch('/user/:id',async(req,res)=>{
+  //  app.patch('/user/:id',async(req,res)=>{
      const updateFields = req.body;
      const id = req.params.id;
 
