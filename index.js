@@ -90,7 +90,7 @@ async function run() {
     const result= await userCollection.find().toArray()
     res.send(result)
    })
-  //  app.patch('/user/:id',async(req,res)=>{
+   app.patch('/user/:id',async(req,res)=>{
      const updateFields = req.body;
      const id = req.params.id;
 
